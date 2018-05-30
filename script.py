@@ -8,9 +8,9 @@ c.get(url)                                                                      
 reg = 5858371                                                                                    #starting roll no
 
 while True:
-    c.find_element_by_name('regno').send_keys(str(reg))
-    c.find_element_by_name('sch').send_keys('09025')
-    c.find_element_by_name('cno').send_keys('5756')
+    c.find_element_by_name('regno').send_keys(str(reg))                                          #enters roll no
+    c.find_element_by_name('sch').send_keys('09025')                                             #enters school code
+    c.find_element_by_name('cno').send_keys('5756')                                              #enters centre code
     c.find_element_by_name('B2').click()                                                         #fills in data and submits the form
     s=0
     soup = bs(c.page_source)                                                                     #parses the html to extract marks and name
@@ -18,7 +18,7 @@ while True:
     for i in range(1,6):
         s+=int(soup.find_all('table')[5].find_all('tr')[i].find_all('td')[4].text)               #sum
         print(int(soup.find_all('table')[5].find_all('tr')[i].find_all('td')[4].text),end=' ')   #print marks
-    print('\nPercentage: ',s/5,'%')                                                              #print percentage
+    print('\nPercentage: ',s/5,'%\n')                                                            #print percentage
     #print(reg)
     reg+=1
     c.back()
