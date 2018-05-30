@@ -9,3 +9,5 @@ To run the script open powershell or cmd and run the following:
 > **`python script.py`**    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on windows)
 
 > **`python3 script.py`**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on linux or mac)
+
+### The script was tested on 2017-2018 CBSE class 12 results.
